@@ -48,7 +48,7 @@
             </div>
 
             <hr />
-            <nav class="page-nav main-layout flex space-between">
+            <nav class="page-nav full-width main-layout flex space-between">
                 <button type="button" class="btn-nav">Previous</button>
                 <button type="button" class="btn-nav">Next</button>
             </nav>
@@ -91,11 +91,11 @@
             }
             function openModal() {
                 document.querySelector('.modal-bgc').classList.remove('hidden');
-                document.querySelector('.hamburger-btn').style.display = 'none';
+                document.querySelector('.modal-bgc').classList.add('shown');
             }
             function closeModal() {
                 document.querySelector('.modal-bgc').classList.add('hidden');
-                document.querySelector('.hamburger-btn').style.display = 'inline-block';
+                document.querySelector('.modal-bgc').classList.remove('shown');
             }
             function toggleMenu(el) {
                 document.querySelectorAll('.active')[0].classList.remove('active');
