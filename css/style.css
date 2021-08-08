@@ -659,6 +659,24 @@ header.full-width {
         text-align: center;
         text-transform: uppercase;
     }
+    .main-nav ul {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        transition: all 0.5s;
+    }
+    .main-nav .active > ul {
+        width: 160px;
+        height: auto;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+        transform: translateX(-50%);
+    }
+    .active > ul li {
+        height: 2rem;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -672,5 +690,19 @@ header.full-width {
         height: 131px;
         width: 131px;
         line-height: 131px;
+    }
+    .main-nav ul {
+        position: absolute;
+        height: 0;
+        opacity: 0;
+    }
+    .main-nav .active > ul {
+        width: 131px;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+        transform: translateX(0%);
+    }
+    .active > ul li {
+        height: 2rem;
     }
 }
