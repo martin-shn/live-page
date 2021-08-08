@@ -679,6 +679,7 @@ header.full-width {
         z-index: 1;
         transform: translateX(-50%);
     }
+}
 
 @media (min-width: 1000px) {
     .main-layout {
