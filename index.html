@@ -12,7 +12,14 @@
             <div class="main-header main-layout flex align-center space-between">
                 <div class="logo">Blogin<span class="logo-green">.</span></div>
                 <div class="main-nav flex">
-                    <a href="#" onclick="toggleMenu(this)"><div>Journal</div></a>
+                    <a href="#" onclick="toggleMenu(this)"
+                        ><div>Journal</div>
+                        <ul>
+                            <li class="li-active" onclick="toggleSubMenu(this)">a</li>
+                            <li onclick="toggleSubMenu(this)">b</li>
+                            <li onclick="toggleSubMenu(this)">c</li>
+                        </ul>
+                    </a>
                     <a href="#" onclick="toggleMenu(this)"><div class="active">About</div></a>
                     <a href="#" onclick="toggleMenu(this)"><div>Work</div></a>
                     <a href="#" onclick="toggleMenu(this)"><div>Contact</div></a>
@@ -92,14 +99,20 @@
             function openModal() {
                 document.querySelector('.modal-bgc').classList.remove('hidden');
                 document.querySelector('.modal-bgc').classList.add('shown');
+                document.querySelector('.hamburger-btn').style.visibility = 'hidden';
             }
             function closeModal() {
                 document.querySelector('.modal-bgc').classList.add('hidden');
                 document.querySelector('.modal-bgc').classList.remove('shown');
+                document.querySelector('.hamburger-btn').style.visibility = 'visible';
             }
             function toggleMenu(el) {
                 document.querySelectorAll('.active')[0].classList.remove('active');
                 el.classList.add('active');
+            }
+            function toggleSubMenu(el) {
+                document.querySelectorAll('.li-active')[0].classList.remove('li-active');
+                el.classList.add('li-active');
             }
         </script>
     </body>
