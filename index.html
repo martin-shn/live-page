@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Blogin.</title>
+    </head>
+    <body>
+        <header class="full-width">
+            <div class="main-header main-layout flex align-center space-between">
+                <div class="logo">Blogin<span class="logo-green">.</span></div>
+                <div class="main-nav flex">
+                    <a href="#" onclick="toggleMenu(this)"><div>Journal</div></a>
+                    <a href="#" onclick="toggleMenu(this)"><div class="active">About</div></a>
+                    <a href="#" onclick="toggleMenu(this)"><div>Work</div></a>
+                    <a href="#" onclick="toggleMenu(this)"><div>Contact</div></a>
+                </div>
+            </div>
+            <!-- <button class="btn-menu-toggle" onclick="toggleMenu()">☰</button> -->
+        </header>
+
+        <main class="main-content main-layout cards-layout">
+            <div class="card card-layout">
+                <img src="img/001.png" alt="" class="card-image" />
+                <div class="card-content content-layout flex space-between">
+                    <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. <br /><br />Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+                    <button class="card-btn rounded-btn" onclick="openModal()">Continue Reading</button>
+                </div>
+            </div>
+            <div class="card card-layout">
+                <img src="img/002.png" alt="" class="card-image" />
+                <div class="card-content content-layout flex space-between">
+                    <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. <br /><br />Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+                    <button class="card-btn rounded-btn" onclick="openModal()">Continue Reading</button>
+                </div>
+            </div>
+            <div class="card card-layout">
+                <img src="img/003.png" alt="" class="card-image" />
+                <div class="card-content content-layout flex space-between">
+                    <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
+                    <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. <br /><br />Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
+                    <button class="card-btn rounded-btn" onclick="openModal()">Continue Reading</button>
+                </div>
+            </div>
+
+            <hr />
+            <nav class="page-nav main-layout flex space-between">
+                <button type="button" class="btn-nav">Previous</button>
+                <button type="button" class="btn-nav">Next</button>
+            </nav>
+        </main>
+
+        <footer class="footer-container full-width">
+            <div class="footer-logo">Blogin<span>.</span></div>
+            <small>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at </small>
+            <a href="#">Pixelhint.com</a>
+            <section class="social-logos" flex space-between>
+                <div>
+                    <a href="#" class="social fb"></a>
+                </div>
+                <div>
+                    <a href="#" class="social tw"></a>
+                </div>
+                <div>
+                    <a href="#" class="social be"></a>
+                </div>
+                <div>
+                    <a href="#" class="social dr"></a>
+                </div>
+            </section>
+        </footer>
+        <button class="hamburger-btn" onclick="menuOpen()">☰</button>
+        <aside></aside>
+
+        <!-- MODAL -->
+        <div class="modal-bgc hidden">
+            <div class="modal">
+                <button class="modal-close" onclick="closeModal()">X</button>
+                <h1>Join us to get access<br />to the latest stories!</h1>
+                <input type="email" placeholder="email address" />
+                <button class="modal-btn">Subscribe</button>
+            </div>
+        </div>
+        <script>
+            function menuOpen() {
+                document.body.classList.toggle('menu-open');
+            }
+            function openModal() {
+                document.querySelector('.modal-bgc').classList.remove('hidden');
+                document.querySelector('.hamburger-btn').style.display = 'none';
+            }
+            function closeModal() {
+                document.querySelector('.modal-bgc').classList.add('hidden');
+                document.querySelector('.hamburger-btn').style.display = 'inline-block';
+            }
+            function toggleMenu(el) {
+                document.querySelectorAll('.active')[0].classList.remove('active');
+                el.classList.add('active');
+            }
+        </script>
+    </body>
+</html>
