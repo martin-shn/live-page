@@ -84,6 +84,11 @@ hr {
 button {
     cursor: pointer;
 }
+li {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
 
 /* LAYOUT */
 
@@ -674,10 +679,6 @@ header.full-width {
         z-index: 1;
         transform: translateX(-50%);
     }
-    .active > ul li {
-        height: 2rem;
-    }
-}
 
 @media (min-width: 1000px) {
     .main-layout {
@@ -701,8 +702,5 @@ header.full-width {
         background-color: rgba(0, 0, 0, 0.8);
         z-index: 1;
         transform: translateX(0%);
-    }
-    .active > ul li {
-        height: 2rem;
     }
 }
