@@ -487,8 +487,7 @@ header.full-width {
         width: 50%;
         height: 100vh;
         background-color: rgba(41, 41, 41, 0.7);
-        box-shadow: -11px 2px 15px 0px black;
-        transform: translateX(120%);
+        transform: translateX(100%);
         transition: all 1s;
     }
     .hamburger-btn {
@@ -505,6 +504,7 @@ header.full-width {
     }
     body.menu-open aside {
         transform: translateX(0%);
+        box-shadow: -11px 2px 15px 0px black;
         transition: all 1s;
     }
     body.menu-open .main-nav {
